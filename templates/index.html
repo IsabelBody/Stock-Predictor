@@ -7,23 +7,27 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-    <h1>Stock Predictions</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Company</th>
-                <th>Prediction</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for prediction in predictions %}
-            <tr>
-                <td>{{ prediction.company }}</td>
-                <td>{{ prediction.prediction }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <a href="/view_code" target="_blank" class="button">View Code</a>
+    <div class="container">
+        <h1>Stock Predictions</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Prediction</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for prediction in predictions %}
+                <tr>
+                    <td>{{ prediction.company }}</td>
+                    <td>{{ prediction.prediction }}</td>
+                    <td><img src="/static/{{ prediction.company.upper() }}_prediction.png" alt="{{ prediction.company }} Prediction"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/view_code" class="button">View Code</a>
+    </div>
 </body>
 </html>
