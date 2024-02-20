@@ -8,21 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Stock Predictions</h1>
+        <h1>Stock Predictions for 22/02/2024</h1>
         <table>
-            <thead>
-                <tr>
-                    <th>Company</th>
-                    <th>Prediction</th>
-                    <th>Image</th>
-                </tr>
-            </thead>
             <tbody>
                 {% for prediction in predictions %}
                 <tr>
-                    <td>{{ prediction.company }}</td>
-                    <td>{{ prediction.prediction }}</td>
-                    <td><img src="/static/{{ prediction.company.upper() }}_prediction.png" alt="{{ prediction.company }} Prediction"></td>
+                    <td colspan="2">
+                        <h2>{{ prediction.company }}</h2>
+                        <p>{{ prediction.prediction }}</p>
+                    </td>
+                    <td>
+                        <img src="/static/{{ prediction.company.upper() }}_prediction.png" alt="{{ prediction.company }} Prediction">
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
