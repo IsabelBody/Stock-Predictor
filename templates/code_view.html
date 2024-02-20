@@ -9,7 +9,7 @@
         .code-container {
             background-color: #1E1E1E;
             color: #D4D4D4;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, sans-serif;
             font-size: 14px;
             line-height: 1.6;
             padding: 20px;
@@ -48,12 +48,31 @@
         .bracket {
             color: #D4D4D4;
         }
+
+
+        .button {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
     </style>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
+    <a href="/" class="button">Back to Predictions</a>
     <h1>Dive into my Code!</h1>
     <div class="code-container">
-        <pre>{{ code_content }}</pre>
+        <div class="code-line"></div><pre>{{ code_content }}</pre></div>
     </div>
 </body>
 </html>
