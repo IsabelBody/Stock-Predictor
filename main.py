@@ -10,8 +10,8 @@ def display_predictions():
         reader = csv.DictReader(file)
         for row in reader:
             predictions.append({
-                'company': row['company'],
-                'prediction': row['prediction']
+                'company': row['Company'],
+                'prediction': row['Prediction']
             })
     return render_template('index.html', predictions=predictions)
 
