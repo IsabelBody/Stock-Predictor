@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Predictions</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Predictions for 22/02/2024</h1>
+        <table>
+            <tbody>
+                {% for prediction in predictions %}
+                <tr>
+                    <td colspan="2">
+                        <h2>{{ prediction.company }}</h2>
+                        <p>{{ prediction.prediction }}</p>
+                    </td>
+                    <td>
+                        <img src="/static/{{ prediction.company.upper() }}_prediction.png" alt="{{ prediction.company }} Prediction">
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/view_code" class="button">View Code</a>
+    </div>
+</body>
+</html>

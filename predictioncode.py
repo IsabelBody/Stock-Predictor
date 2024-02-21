@@ -77,6 +77,3 @@ for company in companies:
     prediction = scaler.inverse_transform(prediction)
     predictions.append({'Company': company, 'Prediction': prediction[0][0]})
 
-# Save predictions to CSV
-predictions_df = pd.DataFrame(predictions)
-predictions_df.to_csv('predictions.csv', index=False)
