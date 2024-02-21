@@ -74,3 +74,15 @@ h2, p {
     margin: 0 auto;
     max-width: 600px; /* Adjust as needed */
 }
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #b7b4b4;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
